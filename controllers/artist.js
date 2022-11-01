@@ -2,6 +2,7 @@
 const { default: mongoose } = require("mongoose");
 const { Artist } = require("../models/Artist");
 const { User } = require("../models/User");
+const {Event} = require("../models/Event")
 
 exports.artist_index_get = (req, res) => {
   Artist.find(req.query.id)
@@ -34,14 +35,3 @@ exports.artist_profile_get = (req, res) => {
     });
 };
 
-exports.artist_delete_get = (req, res) => {
-  console.log(`Delete ${req.query.id}`);
-  Artist.findByIdAndDelete(req.query.id)
-
-    .then(() => {
-      res.redirect("/");
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};

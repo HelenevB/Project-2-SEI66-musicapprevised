@@ -44,11 +44,17 @@
     <fieldset >
         <legend>Line-Up</legend>
         <div>
-            <% event.artist.forEach(function(artist) {     %> 
-            <input class="form-control" type="checkbox"  name="artist[]" checked value="<%=artist._id%>">
+            <% artist.forEach(function(artist) {     %> 
+                <% for(let i=0 ;i< artist.user.length; i++){ %> 
+                    <% if(artist.user.length === 0 ){ %>
+                    <% } %>
+                    <% if(artist.user.length > 0 ){ %>
+            <input type="checkbox"  name="artist[]" value="<%= artist._id %>">
             <label><%= artist.bandName %></label>
-            </div>
-<% }) %>
+                    <% } %>
+                    <% } %>
+        </div>
+                     <% }) %>
 </fieldset>
         <div class="form-group">
             <label>Event Details</label>

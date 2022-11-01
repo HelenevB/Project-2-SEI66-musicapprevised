@@ -7,29 +7,30 @@
   
     
     <% artist.forEach(function(artist) { %>
-        <div class="grid-section" >
+       
        <% for(let i=0 ;i< artist.user.length; i++){ %> 
-   
-        <img  src="../image/<%=artist.user[i].image%>">
-        <p><%=artist.user[i].name%></p>
-       <% } %>
-       <h3><%=artist.bandName%></h3>
+          <% if(artist.user.length === 0 ){ %>
+          <% } %>
+          <% if(artist.user.length > 0 ){ %>
+            <div class="grid-section" >
+            <img  src="../image/<%=artist.user[i].image%>"> 
+            <p><%=artist.user[i].name%></p>
+          
+          <h3><%=artist.bandName%></h3>
        <% for(let i=0 ;i< artist.genres.length; i++){ %>
            <span id="artistgenres">  #<%=artist.genres[i]%></span>
-           <% } %>
-           <% if(currentUser) { %>
-              <p> <a href="/artist/detail?id=<%=artist._id%>" >Artist Profile</a></p>
+         <% } %>
+        
+        <p> <a href="/artist/detail?id=<%=artist._id%>" >Artist Profile</a></p>
 
-         
+      <% } %>
 
-           <% } else { %>
-            <a class="btn btn-primary profile-button" href="/artist/delete?id=<%=artist._id%>" role="button">Delete Account</a>
-           <% } %>
-          
 </div>
+      <% } %>
+
    <% }) %>
 
-</div>
+
 
 
 

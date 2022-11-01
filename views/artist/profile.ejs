@@ -1,17 +1,18 @@
 <section >
 
    <% artist.forEach(function(artist) { %> 
+      <% if(artist.user.length === 0  ){ %>
+         <% } %>
+   <% if ( artist.user.length > 0  && currentUser._id.toString() === artist.user[0]._id.toString()) { %> 
       <% console.log(artist.user[0].firstName) %>
-      <% console.log(currentUser._id) %>
       <% console.log(artist.user[0]._id) %>
-   <% if (currentUser._id.toString() === artist.user[0]._id.toString()) { %> 
      
    <div class="artistPage" >
       <aside id="artistaccount">
       
         <a class="btn btn-primary artist" id="accountbtn" href="/auth/update?id=<%= currentUser._id %>" role="button">Update Account</a><br><br>
         <a class="btn btn-primary artist"  id="accountbtn" href="/auth/updatePassword?id=<%= currentUser._id %>" role="button">Change Password</a><br><br>
-        <a class="btn btn-primary artist" id="accountbtn" href="/auth/delete?id=<%= currentUser._id %>" role="button"> Delete Profile</a><br><br>
+        <a class="btn btn-primary artist" id="accountbtn" href="/auth/delete?id=<%=currentUser._id %>" role="button"> Delete Profile</a><br><br>
         <a class="btn btn-primary artist" id="accountbtn" href="/event/add"> Add Event</a>
       
         
@@ -45,8 +46,8 @@
       <% for(let i=0 ;i< artist.event.length; i++){ %>
          
        <div class="grid-container">
-       <div class="grid-section" style="background-color:rgb(242, 242, 228); margin-top: 10px;">
-      <img   src="../image/<%=artist.event[i].eventPhoto%>">
+       <div class= "grid-section" style="background-color:rgb(242, 242, 228); margin-top: 10px;">
+      <img  style="height:150px; width: 150px;" src="../image/<%=artist.event[i].eventPhoto%>">
       <h5><%=artist.event[i].name%></h5>
       <p><%=artist.event[i].venue%><p>
       <a  class="btn btn-primary artist" style="background-color:rgb(198, 198, 198); border: none; margin-bottom: 10px;" href="/event/edit?id=<%=artist.event[i]._id%>"> Edit Event</a>
@@ -56,6 +57,7 @@
       <% } %>
    </div>
           <% } %>
+   
           <% }) %> 
       
   
