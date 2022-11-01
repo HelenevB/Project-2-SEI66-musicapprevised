@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "nodemon server",
-    "start": "node server.js"
+    "start": "node server"
   },
-  "author": "Ellie Eadington",
+  "author": "Ellie Eadington & Helene van Besouw",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
