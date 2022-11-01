@@ -35,3 +35,14 @@ exports.artist_profile_get = (req, res) => {
     });
 };
 
+exports.artist_delete_get = (req, res) =>{
+  console.log(`Delete ${req.query.id}`)
+  Artist.findByIdAndDelete(req.query.id)
+  .then(()=>{
+      res.redirect("/artist/profile")
+  })
+  .catch(err => {
+      console.log(err)
+  })
+}
+

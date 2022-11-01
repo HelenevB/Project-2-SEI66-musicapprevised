@@ -39,7 +39,6 @@ exports.auth_signup_post =(req,res) =>{
        artist.user.push(user)
        console.log(artist.user[0])
        artist.save()  
-       user.artist.push(artist)
 
     } else{
         console.log("they have signed up as a user ")
