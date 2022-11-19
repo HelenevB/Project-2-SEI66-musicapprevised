@@ -3,17 +3,16 @@ ___
 
 ### **Contents**
 ---
-* Overview
-* The Brief & Timeframe 
-* Technologies used 
-* App Flow 
-* The Planning & Development Process 
-* Wins & Challenges
-* Bugs
-* Future Enhancements 
-* Key Learnings
+* [Overview](#overview)
+* [The Brief & Timeframe](#the-brief--timeframe) 
+* [Technologies used](#technologies-used)
+* [App Flow](#app-flow)
+* [Planning & Development Process](#planning--development-process)
+* [Wins & Challenges](#wins--challenges)
+* [Bugs](#bugs)
+* [Future Enhancements](#future-enhancements) 
+* [Key Learnings](#key-learnings)
 <br>
-
 ### **Overview**
 ---
 <img src="public/ReadME/MusicBanner.png">
@@ -27,11 +26,10 @@ The source code can be found on GitHub [here](https://github.com/HelenevB/Projec
 * Clone the repository,
 * run npm install to download all the required dependencies,
 * set up a .env file: 
-
     * configure to a Port (line 15 server.js file) 
     * configure to your local mongo dB database (line 68 server.js file)
     * configure your secret (line 42 server.js file) 
-    * run the npm test to then start the application 
+ * run the npm test to then start the application 
 
 **Deployment**
 
@@ -85,16 +83,17 @@ The **main index** page (homepage)
 
 From there, the user can **sign** up or **log in**. 
 
-<img src="public/ReadME/signup.png" width=49%>
-<img src="public/ReadME/login.png" width=50%>
+<img src="public/ReadME/signup.png" width=45%> <img src="public/ReadME/login.png" width=45%>
+
 
 
 Once logged in, all users will be redirected back to the above homepage.  ‘general-users’ will be able to bookmark events to their profile by clicking “add”. From their profile, they can remove the event and also view/ update their account details:
 
-<img src="public/ReadME/userprofile.png">
+<img src="public/ReadME/userprofile.png" width=100%>
 
 **Event details page**: 
-<img src="public/ReadME/eventdetails.png">
+
+<img src="public/ReadME/eventdetails.png" width=100%>
 
 General users can also **view all Artists** registered with the site and the details for each **Artist**.
 
@@ -104,7 +103,7 @@ General users can also **view all Artists** registered with the site and the det
 
 **Artists account profile**: if the user is registered as an artist, their account profile will give them access to creating, updating and deleting events they are associated with: 
 
-<img src="public/ReadME/artistaccount.png"><br>
+<img src="public/ReadME/artistaccount.png" width="100%"><br>
 
 ### **Planning & Development Process**
 ---
@@ -128,8 +127,7 @@ Therefore, the Artist schema was to reference the user associated, so it should 
 
 Once we had finalised our ERD, we worked on drawing up our wireframe (using Figma) and created a roadmap of requirements for the site to establish what features we would focus on.
 
-<img src="public/ReadME/figma.png" width=49%>
-<img src="public/ReadME/excelmap.png" width=49%>
+<img src="public/ReadME/figma.png" width=45%> <img src="public/ReadME/excelmap.png" width=45%>
 
 
 The functionalities I was responsible for in the build process were: 
@@ -194,4 +192,53 @@ Despite the challenges I have faced regarding the sign-up, there were elements o
 3. Write a function that provides instructions on where the file will be stored, what the file will be called and a second to determine which files will be accepted. I saved these functions in a file called “fileupload.js.
 
 <img src="public/ReadME/imgupload.png">
+
+This function could then be exported and called upon anytime image upload was required. :
+
+<img src="public/ReadME/imguploadrouter.png">
+
+ Once the sign-up functionality had been completed, I worked on the entire CRUD operations for “Events”, the details page for the “Artist”, and finally, the “Artist-User Profile” page. This was a critical page as this was where access was given for creating events and then updating, editing, and deleting any events associated with that artist held, so only the artist-user logged in would have the authorisation to access these features. Any other user would only have the right to view the event details.
+<br>
+
+### **Wins & Challenges**
+---
+
+For me, the most significant wins were being able to work with another person as we were able to bounce ideas off each other, talk through challenges and experience working further with Git and GitHub. In terms of development, I got confidence from being able to work through functionalities that we’d not covered in class, such as image upload and change of password.  When I got these to work, I had that “fist-pump” moment along with that  “I CAN DO THIS” feeling, which I was buzzing from.
+
+My biggest challenge was getting to grips with the relationship between the user and the artist. Having only been introduced to data associations with Mongoose the week before the project started, building an application with two-different user types took a lot of work. At the start of the project, I didn’t fully understand how the two models (artist and user) would interact with each other. It felt like, throughout the week, there was a lot of trial and error.  Having said this, it has felt rewarding to come back to the project to be able to find “a fix” for the significant bug that had caused our deployment issues. 
+<br>
+
+### **Bugs**
+---
+* General user's Information was showing on the Artist Index (fixed) 
+* Artist deletes functionality not complete (fixed) 
+* The artist-profile update functionality is not complete, so artists  are currently unable to update their bio 
+* Success or failure messages after form submissions still need to be completed, so the user is not getting notified on if sign up or sign-in is successful 
+* The user session timeouts, so login is required frequently 
+* When a user either bookmarks or removes an event from their profile, they need to refresh the page for the change to be seen 
+* Models to be amended so that there is a one-to-one relationship between the user & artist 
+* Sign-up/ Sign-in is not displayed on the navigation bar clearly, it is currently as a dropdown, which on review is not very practical
+<br>
+
+### **Future Enhancements**
+___
+
+*  Make the site fully responsive. 
+* Add search functionality 
+* Show numbers of those who are interested in going to an event 
+* Give the option to buy tickets 
+Improved name and site content
+
+### **Key Learnings**
+---
+This project week was a big eye-opener. It was a step up from project one, giving me my first insight into group coding, data associations, and working with frameworks. It was exciting and challenging and has taken some time to reflect on. My key learnings from it have been: 
+
+
+* To ensure I understand the relationship between the data models at the planning stage: Ask and answer how I’ll want to access the data to ensure the correct references are made before proceeding with the development process.  
+* Split workload more effectively to ensure that all members of the team are working on MVP features first before starting on enhancing features such as filtering.
+Ensure that when testing features, all critical scenarios are covered.  
+* The importance of taking breaks; I took very little time away from the screen during this project, which impacted my ability to take a step back, reflect and look at the bigger picture of the project. 
+
+
+All in all, I walked away from the project hungry to learn more. 
 
