@@ -61,9 +61,7 @@ Please note there is an issue with image upload where Heroku’s file storage de
 	* a user must be able to sign in and sign-out 
 	* a user must be able to create and then be able to edit, review, and delete this resource 
 * This was a group project alongside [Ellie Eadington](https://github.com/ellieeadington) 
-* Timeframe: 7 Days 
-<br>
-
+* Timeframe: 7 Days <br>
 ### **Technologies Used**
 ---
 * Express
@@ -73,9 +71,7 @@ Please note there is an issue with image upload where Heroku’s file storage de
 * CSS
 * JavaScript
 * MongoDB/Mongoose
-* Git & GitHub 
-<br>
-
+* Git & GitHub <br>
 ### **App Flow**
 ---
 The **main index** page (homepage)
