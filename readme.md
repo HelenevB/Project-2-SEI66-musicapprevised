@@ -99,8 +99,7 @@ Once logged in, all users will be redirected back to the above homepage.  ‘gen
 General users can also **view all Artists** registered with the site and the details for each **Artist**.
 
 
-<img src="public/ReadME/artistindex.png" width=45%>
-<img src="public/ReadME/artistdetail.png" width=45%>
+<img src="public/ReadME/artistindex.png" width=42%> <img src="public/ReadME/artistdetail.png" width=42%>
 
 **Artists account profile**: if the user is registered as an artist, their account profile will give them access to creating, updating and deleting events they are associated with: 
 
@@ -218,7 +217,7 @@ My biggest challenge was getting to grips with the relationship between the user
 * The user session timeouts, so login is required frequently 
 * When a user either bookmarks or removes an event from their profile, they need to refresh the page for the change to be seen 
 * Models to be amended so that there is a one-to-one relationship between the user & artist 
-* Sign-up/ Sign-in is not displayed on the navigation bar clearly, it is currently as a dropdown, which on review is not very practical<br>
+* Sign-up/ Sign-in is not displayed on the navigation bar clearly, it is currently as a dropdown, which on review is not very practical add add<br>
 
 ### **Future Enhancements**
 ___
