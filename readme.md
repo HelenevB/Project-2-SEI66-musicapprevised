@@ -18,7 +18,8 @@ ___
 ---
 <img src="public/ReadME/MusicBanner.png">
 
-The Music Events App is a site that allows Artists to create and promote their events and users can filter through these events and bookmark to the profile the ones they wish to attend.
+The Music Events App is a site that allows Artists to create and promote their events, and users can filter through these events and bookmark the ones they wish to attend to their profile
+
 
 The source code can be found on GitHub [here](https://github.com/HelenevB/Project-2-SEI66-musicevents)
 
@@ -107,7 +108,7 @@ For this project, we thought it would be nice to build the application around a 
 
 We started the planning process by establishing our models and the relationships between each of these using an ERD:
 
-<img src="public/ReadME/ERD2.png">
+<img src="public/ReadME/ERD2.png"  width="100%">
 
 We agreed that there would be three schemas: 
 
@@ -141,14 +142,14 @@ The functionalities I was responsible for in the build process were:
 * Authorisation for these features 
 
 Trello was then utilised to keep track of tasks. Throughout the project, we would have a daily catch-up in the morning to talk through what we had worked on the day before and what task we’d each set ourselves for the day: 
-<img src="public/ReadME/trello.png">
+<img src="public/ReadME/trello.png" width="100%">
 
 After identifying our roles and responsibilities, it was time to start the development process. 
 
 
-As team lead, Ellie set up the repository, which I then forked. Since it was our first time working in a group using GitHub, we tested the push and pulling requirements for code merging by setting up a “dummy file”; I pushed this to GitHub, and set a pull request to Ellie, who then altered the file and pushed it back, from me to then pull. 
+As team lead, Ellie set up the repository, which I then forked. Since it was our first time working in a group using GitHub, we tested the push and pulling requirements for code merging by setting up a “dummy file”; I pushed this to GitHub and set a pull request to Ellie, who then altered the file and pushed it back, from me to then pull. 
 
-The database was then set up, and three models for Artist, Events and User were created.  Once we had the file structure in place, it was time to start working on the features.
+The database was set up, and three models for Artist, Events and User were created.  Once we had the file structure in place, it was time to start working on the features.
 
 I chose to tackle the signup feature first, as whether a “user” was a “general user” or an “artist” was integral to developing the rest of the site functionality, as access to certain rights would be determined by who you were.
  
@@ -163,18 +164,18 @@ Creating one sign-up form
 * If “Artist” were selected additional field would be displayed to complete before form submission 
 * I then created one sign-up post controller (see code below) that would first create a new instance of the “User Model”, saving the user details, profile picture and encrypted password in the database
 
-<img src="public/ReadME/signupcontroller1.png">
+<img src="public/ReadME/signupcontroller1.png" width="100%">
 
 * “then” the database would be searched by that newly saved “User. ID”,  a new instance of the “Artist Model” would be created and the “User. Id” would be pushed to that “Artist. user”  field, meaning there is now a reference to that user in the Artist model, establishing the association we needed between the “Artist” & the ”User’.
 
  On initial testing of this functionality, I focused my efforts on testing if this worked for the artist, checking their “User” details were saved in the database and that their “Artist” information was saved with reference to that “user_id”. On signing up as an artist, I could see the data was saved as I’d wanted, so was happy to move on. 
 
-However, this caused some bugs further down the line when populating our application upon deployment. It became apparent that the general user information was also populating the artist index page (with their profile picture and blank artist information). This is because I had omitted a conditional statement in the original code, so all users were being pushed to the artist model, and if the information was not provided, an empty artist object was created. 
+However, after populating our application for deployment, we notice some errors. It became apparent that the general user information was populating the artist index page (with their profile picture and blank artist information). This was because I omitted a conditional statement, so all users were pushed to the artist model. If the information was not provided, an empty artist object was created.  
 
 
 Since the initial deployment, the code has been rectified with the inclusion of a conditional statement to prevent blank artist data from being created for the “general- user”: 
 
-<img src="public/ReadME/signupcontroller2.png">
+<img src="public/ReadME/signupcontroller2.png" width="100%">
 
 
 As a result of this amendment, identified bugs relating to the rendering of the Artist Index have been fixed. 
@@ -199,7 +200,8 @@ This function could then be exported and called upon anytime image upload was re
 ### **Wins & Challenges**
 ---
 
-For me, the most significant wins were being able to work with another person as we were able to bounce ideas off each other, talk through challenges and experience working further with Git and GitHub. In terms of development, I got confidence from being able to work through functionalities that we’d not covered in class, such as image upload and change of password.  When I got these to work, I had that “fist-pump” moment along with that  “I CAN DO THIS” feeling, which I was buzzing from.
+For me, the most significant wins were being able to work with another person as we were able to bounce ideas off each other, talk through challenges and experience working further with Git and GitHub. In terms of development, I got confidence from working through building functionalities we’d not covered in class, such as image upload and change of password.  When I got these to work, I had that “fist-pump” moment along with that  “I CAN DO THIS” feeling, which I was buzzing from.
+
 
 My biggest challenge was getting to grips with the relationship between the user and the artist. Having only been introduced to data associations with Mongoose the week before the project started, building an application with two-different user types took a lot of work. At the start of the project, I didn’t fully understand how the two models (artist and user) would interact with each other. It felt like, throughout the week, there was a lot of trial and error.  Having said this, it has felt rewarding to come back to the project to be able to find “a fix” for the significant bug that had caused our deployment issues. 
 <br>
@@ -209,11 +211,11 @@ My biggest challenge was getting to grips with the relationship between the user
 * General user's Information was showing on the Artist Index (fixed) 
 * Artist deletes functionality not complete (fixed) 
 * The artist-profile update functionality is not complete, so artists  are currently unable to update their bio 
-* Success or failure messages after form submissions still need to be completed, so the user is not getting notified on if sign up or sign-in is successful 
+* Success or failure messages after form submissions still need to be completed, so the user is not getting notified if sign-up or sign-in is successful 
 * The user session timeouts, so login is required frequently 
 * When a user either bookmarks or removes an event from their profile, they need to refresh the page for the change to be seen 
 * Models to be amended so that there is a one-to-one relationship between the user & artist 
-* Sign-up/ Sign-in is not displayed on the navigation bar clearly, it is currently as a dropdown, which on review is not very practical add add<br>
+* Sign-up/ Sign-in is not displayed on the navigation bar; clearly, it is currently as a dropdown, which on review, is not very practical<br>
 
 ### **Future Enhancements**
 ___
@@ -235,5 +237,6 @@ Ensure that when testing features, all critical scenarios are covered.
 * The importance of taking breaks; I took very little time away from the screen during this project, which impacted my ability to take a step back, reflect and look at the bigger picture of the project. 
 
 
-All in all, I walked away from the project hungry to learn more. 
+All in all, I walked away from the project, hungry to learn more. 
+ 
 
