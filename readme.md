@@ -1,5 +1,4 @@
 ## **Project 2 - Music Events App**
-___
 
 ### **Contents**
 ---
@@ -16,7 +15,7 @@ ___
 
 ### **Overview**
 ---
-<img src="public/ReadME/MusicBanner.png">
+<img src="public/ReadME/MusicBanner.png" width="100%">
 
 The Music Events App is a site that allows Artists to create and promote their events, and users can filter through these events and bookmark the ones they wish to attend to their profile
 
@@ -77,7 +76,7 @@ Please note there is an issue with image upload where Heroku’s file storage de
 ---
 The **main index** page (homepage)
 
-<img src="public/ReadME/musicindex.png">
+<img src="public/ReadME/musicindex.png" width="100%">
 
 From there, the user can **sign** up or **log in**. 
 
@@ -184,15 +183,15 @@ Despite the challenges I have faced regarding the sign-up, there were elements o
 
 1. use of Multer middleware for image upload – so this was installed as a dependency 
 2. include multi-part/form-data as part of form submission to allow files to be submitted 
-<img src="public/ReadME/signupfrom.png">
+<img src="public/ReadME/signupfrom.png" width="100%">
 
 3. Write a function that provides instructions on where the file will be stored, what the file will be called and a second to determine which files will be accepted. I saved these functions in a file called “fileupload.js.
 
-<img src="public/ReadME/imgupload.png">
+<img src="public/ReadME/imgupload.png" width="100%">
 
 This function could then be exported and called upon anytime image upload was required. :
 
-<img src="public/ReadME/imguploadrouter.png">
+<img src="public/ReadME/imguploadrouter.png" width="100%">
 
  Once the sign-up functionality had been completed, I worked on the entire CRUD operations for “Events”, the details page for the “Artist”, and finally, the “Artist-User Profile” page. This was a critical page as this was where access was given for creating events and then updating, editing, and deleting any events associated with that artist held, so only the artist-user logged in would have the authorisation to access these features. Any other user would only have the right to view the event details.
 <br>
