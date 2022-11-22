@@ -17,7 +17,7 @@
 ---
 <img src="public/ReadME/MusicBanner.png" width="100%">
 
-The Music Events App is a site that allows Artists to create and promote their events, and users can filter through these events and bookmark the ones they wish to attend to their profile.
+The Music Events App is a site that allows artists to create and promote their events, and users can filter through these events and bookmark the ones they wish to attend to their profile.
 
 
 The source code can be found on GitHub [here](https://github.com/HelenevB/Project-2-SEI66-musicevents).
@@ -162,13 +162,13 @@ At this stage, I sought support from the instructor on how the link should be ma
 
 <img src="public/ReadME/signupcontroller1.png" width="100%">
 
-* “then” the database would be searched by that newly saved “user_id”,  a new instance of the “Artist Model” would be created, and the “user_Id” would be pushed to that “artist.user”  field, meaning there is now a reference to that user in the Artist model, establishing the association we needed between the “Artist” & the ”User’
+* “then” the database would be searched by that newly saved “user_id”,  a new instance of the “Artist Model” would be created, and the “user_id” would be pushed to that “artist.user”  field, meaning there was now a reference to that user in the Artist model, establishing the association we needed between the “Artist” & the ”User’
 
 On initial testing of this functionality, I focused my efforts on testing if this worked for the artist, checking their “User” details were saved in the database and that their “Artist” information was saved with reference to that “user_id”. On signing up as an artist, I could see the data was saved as I’d wanted, so was happy to move on. 
  
-However, after populating our application for deployment, we notice some errors. It became apparent that the general user information was populating the artist index page (with their profile picture and blank artist information). This was because I omitted a conditional statement, so all users were pushed to the artist model. If the information was not provided, an empty artist object was created.  
+However, after populating our application for deployment, we notice some errors. It became apparent that the general user information was populating the artist index page with their profile picture and blank artist information. This was because I omitted a conditional statement, so all users were pushed to the artist model. If the information was not provided, an empty artist object was created.  
 
-Since the initial deployment, the code has been rectified with the inclusion of a conditional statement to prevent blank artist data from being created for the “general- user”:  
+Since the initial deployment, the code has been rectified with the inclusion of a conditional statement to prevent blank artist data from being created for the “general-user”:  
 
 <img src="public/ReadME/signupcontroller2.png" width="100%">
 
