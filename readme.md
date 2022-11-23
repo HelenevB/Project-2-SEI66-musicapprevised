@@ -138,7 +138,7 @@ The features I was responsible for in the build process were:
 * Authorisation for these features 
 * Changing password 
 
-Trello was then utilised to keep track of tasks. Throughout the project, we would have a daily catch-up in the morning to talk through what we had worked on the day before and what task we’d each set ourselves for the day: 
+Trello was then used to keep track of tasks. Throughout the project, we would have a daily catch-up in the morning to talk through what we had worked on the day before and what task we’d each set ourselves for the day: 
 <img src="public/ReadME/trello.png" width="100%">
 
 After identifying our roles and responsibilities, it was time to start the development process. 
@@ -164,7 +164,7 @@ At this stage, I sought support from the instructor on how the link should be ma
 
 * “then” the database would be searched by that newly saved “user_id”,  a new instance of the “Artist Model” would be created, and the “user_id” would be pushed to that “artist.user”  field, meaning there was now a reference to that user in the Artist model, establishing the association we needed between the “Artist” & the ”User’
 
-On initial testing of this functionality, I focused my efforts on testing if this worked for the artist, checking their “User” details were saved in the database and that their “Artist” information was saved with reference to that “user_id”. On signing up as an artist, I could see the data was saved as I’d wanted, so was happy to move on. 
+On initial testing of this functionality, I focused my efforts on testing if this worked for the artist, checking their “User” details were saved in the database and that their “Artist” information was saved with reference to that “user_id”. On signing up as an artist, I could see the data was saved as I wanted, so I was happy to move on. 
  
 However, after populating our application for deployment, we notice some errors. It became apparent that the general user information was populating the artist index page with their profile picture and blank artist information. This was because I omitted a conditional statement, so all users were pushed to the artist model. If the information was not provided, an empty artist object was created.  
 
