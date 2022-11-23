@@ -145,11 +145,10 @@ After identifying our roles and responsibilities, it was time to start the devel
 
 As team lead, Ellie set up the repository, which I then forked. Since it was our first time working in a group using GitHub, we tested the push and pull requirements for code merging by setting up a “dummy file”; I pushed this to GitHub and sent a pull request to Ellie, who then altered the file and pushed it back, for me to fetch. 
 
-The database was set up, and three models for Artist, Events and User were created.  Once we had the file structure in place, it was time to start working on the features.
+The database was set up, and three models for Artist, Events and User were created. Once we had the file structure in place, it was time to start working on the features.
 
 I chose to tackle the signup feature first, as whether a “user” was a “general user” or an “artist” was integral to developing the rest of the site functionality, as access to certain rights would be determined by who you were.
  
-
 This feature proved to be one of my biggest challenges. However, in return was where I established my most significant learnings.
 
 My initial plan was on sign-up users could select whether they were an artist or a user. On submission, If they were an artist, they would be redirected to an artist profile form. Then to make the associations with the user, I created a drop-down where they could select themselves as the associated users (however, this was rendering all registered users, which we wanted to avoid).
@@ -162,7 +161,7 @@ At this stage, I sought support from the instructor on how the link should be ma
 
 <img src="public/ReadME/signupcontroller1.png" width="100%">
 
-* “then” the database would be searched by that newly saved “user_id”,  a new instance of the “Artist Model” would be created, and the “user_id” would be pushed to that “artist.user”  field, meaning there was now a reference to that user in the Artist model, establishing the association we needed between the “Artist” & the ”User’
+* “then” the database would be searched by that newly saved “user_id”,  a new instance of the “Artist Model” would be created, and the “user_id” would be pushed to that “artist.user” field, meaning there was now a reference to that user in the Artist model, establishing the association we needed between the “Artist” & the ”User’
 
 On initial testing of this functionality, I focused my efforts on testing if this worked for the artist, checking their “User” details were saved in the database and that their “Artist” information was saved with reference to that “user_id”. On signing up as an artist, I could see the data was saved as I wanted, so I was happy to move on. 
  
