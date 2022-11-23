@@ -51,7 +51,7 @@ Please note there is an issue with image upload where Heroku’s file storage de
 ### **The Brief & Timeframe**
 ---
 
-*	To build a web application using express framework 
+*	To build a web application using Express framework 
 *	To be deployed on Heroku 
 *	As part of the planning process, an entity relationship diagram and wireframe must be presented
 *	Functionality requirements: 
@@ -81,7 +81,7 @@ From there, the user can **sign up or log in**:
 
 <img src="public/ReadME/signup.png" width=45%> <img src="public/ReadME/login.png" width=45%>
 
-Once logged in, all users are redirected back to the above homepage.  ‘General users’ can bookmark events to their profile by clicking “add”. From their profile, they can remove the event and also view/ update their account details:
+Once logged in, all users are redirected back to the above homepage. ‘General users’ can bookmark events to their profile by clicking “add”. From their profile, they can remove the event and also view/ update their account details:
 
 
 <img src="public/ReadME/userprofile.png" width=100%>
@@ -174,7 +174,7 @@ Since the initial deployment, the code has been rectified with the inclusion of 
 
 As a result of this amendment, identified bugs relating to the rendering of the Artist Index have been fixed. 
 
-Despite the challenges I have faced regarding the sign-up, there were elements of the functionality that I considered a win; these related to image upload. The process of uploading images had yet to be covered in our class tutorials, so I had to do some independent learning to achieve a successful outcome.  After watching various tutorials, I established three key components were required:
+Despite the challenges I have faced regarding the sign-up, there were elements of the functionality that I considered a win; these related to image upload. The process of uploading images had yet to be covered in our class tutorials, so I had to do some independent learning to achieve a successful outcome. After watching various tutorials, I established three required key components:
 
 
 1. Use of Multer middleware for image upload; this was installed as a dependency 
@@ -189,14 +189,14 @@ These functions could then be exported and called upon anytime image upload was 
 
 <img src="public/ReadME/imguploadrouter.png" width="100%">
 
- Once the sign-up functionality had been completed, I worked on the  CRUD operations for “Events” and the details page for the “Artist”. Finally, the “Artist-User Profile”: this page was critical, as this was where access was given for creating, updating, editing, and deleting any events associated with that artist, so only the “artist-user” logged in would have authorisations to access these features. Any other user would only have the right to view the event details.
+ Once the sign-up functionality had been completed, I worked on the CRUD operations for “Events” and the details page for the “Artist”. Finally, the “Artist-User Profile”: this page was critical, as this was where access was given for creating, updating, editing, and deleting any events associated with that artist, so only the “artist-user” logged in would have authorisations to access these features. Any other user would only have the right to view the event details.
 <br>
 
 ### **Wins & Challenges**
 ---
-For me, the most significant wins were being able to work with another person as we were able to bounce ideas off each other, talk through challenges and experience working further with Git and GitHub. In terms of development, I got confidence from working through building functionalities we’d not covered in class, such as image upload and change of password.  When I got these to work, I had that “fist-pump” moment along with that  “I CAN DO THIS” feeling, which I was buzzing from.
+For me, the most significant wins were being able to work with another person as we were able to bounce ideas off each other, talk through challenges and experience working further with Git and GitHub. In terms of development, I got confidence from working through building functionalities we’d not covered in class, such as image upload and change of password. When I got these to work, I had that “fist-pump” moment along with that  “I CAN DO THIS” feeling, which I was buzzing from.
 
-My biggest challenge was getting to grips with the relationship between the user and the artist. Having only been introduced to data associations with Mongoose the week before the project started, building an application with two-different user types took a lot of work. At the start of the project, I didn’t fully understand how the two models (artist and user) would interact with each other. It felt like, throughout the week, there was a lot of trial and error.  Having said this, it has felt rewarding to come back to the project to be able to find “a fix” for the significant bug that had caused our deployment issues.
+My biggest challenge was getting to grips with the relationship between the user and the artist. Having only been introduced to data associations with Mongoose the week before the project started, building an application with two-different user types took a lot of work. At the start of the project, I didn’t fully understand how the two models (artist and user) would interact with each other. It felt like, throughout the week, there was a lot of trial and error. Having said this, it has felt rewarding to come back to the project to be able to find “a fix” for the significant bug that had caused our deployment issues.
  
 <br>
 
